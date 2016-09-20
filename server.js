@@ -2,20 +2,33 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-var articleOne={
+var articles={
+articleOne:{
     title:'Article 1',
     date:'20 Sep 2016',
     heading:'Article 1 goes by editing',
     content:`<p>This is for article one This is for article one  This is for article one</p>
            <p>This is for article one This is for article one This is for article one This is for article one This is for article one
             This is for article one This is for article one This is for article one This is for article one</p>`,
-};
+},
 
-var articleTwo={
+articleTwo:{
      title:'Article 2',
     date:'21 Sep 2016',
     heading:'Article 2 goes by editing',
     content:`<p>This is for article two This is for article 2  This is for article 2</p>`,
+},
+
+articleThree:{
+     title:'Article 3',
+    date:'22 Sep 2016',
+    heading:'Article 3 goes by editing',
+    content:`<p>This is for article three  This is for article 3  This is for article 3
+          This is for article 3  This is for article 3  This is for article 3  This is for article 3
+           for article 3  This is for article 3  This is for article 3
+            for article 3  This is for article 3  This is for article 3
+    </p>`
+}
 };
 
 function createTemplate(data){

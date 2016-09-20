@@ -11,6 +11,13 @@ var articleOne={
             This is for article one This is for article one This is for article one This is for article one</p>`,
 };
 
+var articleTwo={
+     title:'Article 2',
+    date:'21 Sep 2016',
+    heading:'Article 2 goes by editing',
+    content:`<p>This is for article two This is for article 2  This is for article 2</p>`,
+};
+
 function createTemplate(data){
     
     title=data.title;
@@ -63,7 +70,7 @@ app.get('/article-one', function(req, res){
     });
 
 app.get('/article-two', function(req, res){
-    res.send('Article two is requested and is served here');
+    res.send(createTemplate(articleTwo));
 });
 
 app.get('/article-three', function(req, res){

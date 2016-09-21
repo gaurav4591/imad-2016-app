@@ -1,7 +1,11 @@
 console.log('Loaded!');
 var img=document.getElementById('try');
 
+var marginLeft=0;
+function moveRight(){
+    marginLeft += 5;
+    img.style.marginLeft = marginLeft + 'px';
+}
 img.onclick=function(){
-  img.style.marginLeft = '100px';  
-    
+  var interval = setInterval(moveRight,50); 
 };
